@@ -2,16 +2,23 @@
 
 namespace SuperCalculator.Commands
 {
+	// Enum to handle both angles in degrees and radians
 	public enum AngleUnit {
 		Degrees,
 		Radians,
 	}
 
+	// Base class for trig functions, it inherits from command
+	// with the generic type set to double, this means it will 
+	// evaluate to a double.
 	public abstract class Trigonometric : Command<double>
 	{
 		protected double angle;
 		protected AngleUnit unit;
 
+
+		// The constructor takes a string and parses it. It checks if the string
+		// ends with "deg" or "rad" to know the unit of the angle.
 		public Trigonometric(string arg) {
 			this.unit = AngleUnit.Radians;
 
@@ -31,6 +38,7 @@ namespace SuperCalculator.Commands
 			}
 		}
 
+		// Simple helper function to convert degrees into radians
 		protected double to_radians() {
 			return this.angle * Math.PI / 180;
 		}
