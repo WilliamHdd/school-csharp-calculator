@@ -39,11 +39,16 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\Trigonometric\Sin.cs" />
     <Compile Include="Commands\Trigonometric\Trigonometric.cs" />
+    <Compile Include="Calculator\CommandNotFoundException.cs" />
+    <Compile Include="Calculator\InvalidArgumentsException.cs" />
+    <Compile Include="Commands\Basic\Add.cs" />
+    <Compile Include="Commands\Basic\Basic.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Calculator\" />
     <Folder Include="Commands\" />
     <Folder Include="Commands\Trigonometric\" />
+    <Folder Include="Commands\Basic\" />
   </ItemGroup>
 </Project>

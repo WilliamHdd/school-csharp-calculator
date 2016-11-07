@@ -2,19 +2,11 @@
 
 namespace SuperCalculator.Commands
 {
-	public enum AngleUnit {
-		Degrees,
-		Radians,
-	}
-
 	public class Sin : Trigonometric
 	{
-		public Sin(double angle, AngleUnit unit) {
-			this.angle = angle;
-			this.unit = unit;
-		}
+		public Sin(string arg) : base(arg) { }
 
-		public override double execute() {
+		public override double Execute() {
 			if (this.unit == AngleUnit.Degrees) {
 				return Math.Sin(this.to_radians());
 			} else {

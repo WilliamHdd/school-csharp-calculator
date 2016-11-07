@@ -12,13 +12,27 @@ namespace SuperCalculator.Commands
 		protected double angle;
 		protected AngleUnit unit;
 
-		public Trigonometric(double angle, AngleUnit unit) {
-			this.angle = angle;
-			this.unit = unit;
+		public Trigonometric(string arg) {
+			this.unit = AngleUnit.Radians;
+
+			arg.Trim();
+			if (arg.EndsWith("rad")) {
+				arg = arg.Substring(0, arg.Length - 3).Trim();
+				this.unit = AngleUnit.Radians;
+			} else if (arg.EndsWith("deg")) {
+				arg = arg.Substring(0, arg.Length - 3).Trim();
+				this.unit = AngleUnit.Degrees;
+			}
+
+			try {
+				this.angle = Double.Parse(arg);
+			} catch (FormatException) {
+				throw new ArgumentException();
+			}
 		}
 
 		protected double to_radians() {
-			return this.angle * 180 / Math.PI;
+			return this.angle * Math.PI / 180;
 		}
 	}
 }
