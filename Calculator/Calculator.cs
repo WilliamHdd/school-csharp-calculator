@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using SuperCalculator.Commands;
 
 namespace SuperCalculator
@@ -34,6 +35,8 @@ namespace SuperCalculator
 			} catch (ArgumentNullException) {
 				// If the command was not found, throw an exception 
 				throw new CommandNotFoundException(commandName);
+			} catch (TargetInvocationException) {
+				throw new InvalidArgumentException(args, "");
 			}
 		}
 	}

@@ -43,6 +43,7 @@
     <Compile Include="Calculator\InvalidArgumentsException.cs" />
     <Compile Include="Commands\Basic\Add.cs" />
     <Compile Include="Commands\Basic\Basic.cs" />
+    <Compile Include="ExtensionMethods\StringExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -50,5 +51,6 @@
     <Folder Include="Commands\" />
     <Folder Include="Commands\Trigonometric\" />
     <Folder Include="Commands\Basic\" />
+    <Folder Include="ExtensionMethods\" />
   </ItemGroup>
 </Project>
