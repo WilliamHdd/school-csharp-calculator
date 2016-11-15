@@ -1,9 +1,14 @@
 ﻿using System;
-namespace SuperCalculator
+
+namespace SuperCalculator.Commands
 {
-	public class Mult
+	public class Mul : Basic
 	{
-		public Mult() {
+		// See Add.cs 
+
+		public Mul(string args) : base(args, (a, b) => a * b) {
 		}
 	}
 }
+
+
