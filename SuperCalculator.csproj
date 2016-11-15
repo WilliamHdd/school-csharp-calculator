@@ -44,6 +44,7 @@
     <Compile Include="Commands\Basic\Add.cs" />
     <Compile Include="Commands\Basic\Basic.cs" />
     <Compile Include="ExtensionMethods\StringExtensions.cs" />
+    <Compile Include="Commands\Basic\Sub.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
