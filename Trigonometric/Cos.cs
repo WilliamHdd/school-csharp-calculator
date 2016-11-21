@@ -5,6 +5,7 @@ namespace SuperCalculator.Commands
 	public class Cos : Trigonometric
 	{
 		// See Sin.cs
+		public Cos() {}
 
 		public Cos(string arg) : base(arg) { }
 

@@ -4,6 +4,7 @@ namespace SuperCalculator.Commands
 	public class Tan : Trigonometric
 	{
 		//See Sin.cs
+		public Tan() {}
 
 		public Tan(string arg) : base(arg) { }
 

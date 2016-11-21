@@ -34,6 +34,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trigonometric.cs" />
     <Compile Include="Sin.cs" />
+    <Compile Include="Cos.cs" />
+    <Compile Include="Tan.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
