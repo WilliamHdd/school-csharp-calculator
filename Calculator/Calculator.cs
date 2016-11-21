@@ -46,7 +46,7 @@ namespace SuperCalculator
 
 				// Since CreateInstance returns an "object" we need to explore
 				// the object to get the right method: "Execute"
-				var method = command.GetType().GetMethod("Execute");
+				var method = command.GetType().GetMethod("Execute", new Type[] {});
 
 				// We call the method we found with no parameters
 				var result = method.Invoke(command, null);

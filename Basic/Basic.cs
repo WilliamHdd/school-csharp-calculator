@@ -10,6 +10,8 @@ namespace Commands
 		protected double[] values;
 		protected Func<double, double, double> operation;
 
+		public Basic() {}
+
 		// The string is parsed as a sequence of numbers separated by a space.
 		// The constructor also takes a function to apply to the sequence when
 		// executing (e.g. Addition between two numbers)

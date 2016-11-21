@@ -17,6 +17,7 @@ namespace Commands
 		protected double angle;
 		protected AngleUnit unit;
 
+		public Trigonometric(){}
 
 		// The constructor takes a string and parses it. It checks if the string
 		// ends with "deg" or "rad" to know the unit of the angle.

@@ -4,6 +4,8 @@ namespace Commands
 {
 	public class Sin : Trigonometric
 	{
+		public Sin(){}
+
 		// The parsing of the input is already done in the parent
 		// class, we just have to forward the argument
 		public Sin(string arg) : base(arg) { }

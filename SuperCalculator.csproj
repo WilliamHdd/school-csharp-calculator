@@ -48,5 +48,9 @@
       <Project>{96DD8AFA-66CD-42E5-B383-631B0F38BBC5}</Project>
       <Name>Command</Name>
     </ProjectReference>
+    <ProjectReference Include="Basic\Basic.csproj">
+      <Project>{6FD7ECF8-BDAA-440B-A05B-099B852D3F39}</Project>
+      <Name>Basic</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
