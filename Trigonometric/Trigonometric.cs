@@ -1,6 +1,7 @@
 ﻿using System;
+using Command;
 
-namespace SuperCalculator.Commands
+namespace Commands
 {
 	// Enum to handle both angles in degrees and radians
 	public enum AngleUnit {
@@ -34,7 +35,7 @@ namespace SuperCalculator.Commands
 			try {
 				this.angle = Double.Parse(arg);
 			} catch (FormatException) {
-				throw new ArgumentException();
+				throw new InvalidArgumentException(arg, "a number");
 			}
 		}
 

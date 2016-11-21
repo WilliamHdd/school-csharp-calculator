@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Linq;
+using Command;
 
-namespace SuperCalculator.Commands
+namespace Commands
 {
 	// This is a base class for basic operations on a sequence of numbers.
 	public abstract class Basic : Command<double>
@@ -14,9 +15,9 @@ namespace SuperCalculator.Commands
 		// executing (e.g. Addition between two numbers)
 		public Basic(string args, Func<double, double, double> operation) {
 			this.values = args.Trim()
-							  .Split(' ')
-							  .Select(s => Double.Parse(s))
-							  .ToArray();
+				.Split(' ')
+				.Select(s => Double.Parse(s))
+				.ToArray();
 
 			this.operation = operation;
 		}

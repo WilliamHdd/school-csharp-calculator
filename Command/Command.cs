@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SuperCalculator.Commands
+namespace Command
 {
 
 	// This is the abstract class from which all commands will inherit
@@ -16,4 +16,6 @@ namespace SuperCalculator.Commands
 		public abstract T Execute();
 	}
 }
+
+
 

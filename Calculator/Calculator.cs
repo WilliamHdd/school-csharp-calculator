@@ -1,25 +1,45 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
-using SuperCalculator.Commands;
+using System.Collections.Generic;
+using System.IO;
+using Command;
 
 namespace SuperCalculator
 {
 	public class Calculator
 	{
+		private Dictionary<string, Type> commands = new Dictionary<string, Type>();
+
 		public Calculator() {
+			List<Assembly> allAssemblies = new List<Assembly>();
+			string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+			foreach (string dll in Directory.GetFiles(path, "*.dll"))
+				allAssemblies.Add(Assembly.LoadFile(dll));
+
+			foreach (Assembly asm in allAssemblies) {
+				string nspace = "Commands";
+
+				var q = from t in asm.GetTypes()
+						where t.IsClass && t.Namespace == nspace && !t.IsAbstract
+						select t;
+
+				foreach (var command in q) {
+					Console.WriteLine("Command found: " + command.Name);
+					this.commands.Add(command.Name, command);
+				}
+			}
 		}
 
 		public string EvaluateCommand(string commandName, string args) {
-			// Namespace of the commands module
-			string commandNameSpace = "SuperCalculator.Commands";
 
-
-			// If the command is not found, an ArgumentNullException will be raised
+			Type commandType;
+			if (!this.commands.TryGetValue(commandName, out commandType)) {
+				throw new CommandNotFoundException(commandName);
+			}
+				
 			try {
-				// Type.GetType takes a string and tries to find a Type with
-				// the *fully qualified name* - which includes the Namespace
-				Type commandType = Type.GetType(commandNameSpace + "." + commandName);
-
 				// Activator.CreateInstance calls the parameterless constructor
 				// of the given Type to create an instace.
 				var command = Activator.CreateInstance(commandType, args );
@@ -32,6 +52,7 @@ namespace SuperCalculator
 				var result = method.Invoke(command, null);
 
 				return result.ToString();
+
 			} catch (ArgumentNullException) {
 				// If the command was not found, throw an exception 
 				throw new CommandNotFoundException(commandName);

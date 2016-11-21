@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SuperCalculator.Commands
+namespace Commands
 {
 	public class Sub : Basic
 	{
