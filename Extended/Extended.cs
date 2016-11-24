@@ -1,11 +1,23 @@
 ﻿using System;
+using System.Linq;
+using Command;
 
-namespace Extended
+namespace Commands
+
 {
-	public class MyClass
+	public abstract class Extended : Command<double>
 	{
-		public MyClass() {
+		protected double data;
+		public Extended() { }
+		public Extended(string arg) {
+			arg.Trim();
+
+			try {
+				this.data = Double.Parse(arg);
+			} catch (FormatException) {
+				throw new ArgumentException();
+			}
 		}
+
 	}
 }
-

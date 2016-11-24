@@ -33,6 +33,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Extended.cs" />
+    <Compile Include="Exp.cs" />
+    <Compile Include="Sqrt.cs" />
+    <Compile Include="Ln.cs" />
+    <Compile Include="Log.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Command\Command.csproj">
+      <Project>{96DD8AFA-66CD-42E5-B383-631B0F38BBC5}</Project>
+      <Name>Command</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
