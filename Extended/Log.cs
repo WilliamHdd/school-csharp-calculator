@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Commands;
+namespace Commands
 {
 	public class Log : Extended
 	{

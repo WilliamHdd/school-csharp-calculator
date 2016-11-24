@@ -15,6 +15,7 @@ namespace SuperCalculator
 				Console.Write("\n>>> ");
 				var input = Console.ReadLine().Trim();
 
+
 				// Display help
 				if (input.ToLower().StartsWith("help")) {
 					var help_for = input.Substring(4).Trim();

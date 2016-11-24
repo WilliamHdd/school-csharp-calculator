@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SuperCalculator.Commands
+namespace Commands
 {
 	public class Tan : Trigonometric
 	{

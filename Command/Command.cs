@@ -6,6 +6,7 @@ namespace Computer
 	public interface Computer
 	{
 		double Execute (params string[] values);
+
 	}
 }
 
@@ -26,6 +27,7 @@ namespace Command
 		
 		public abstract T Execute();
 
+
 		public double Execute (params string[] values)
 		{
 			Type type = this.GetType();
@@ -37,6 +39,7 @@ namespace Command
 			var result = method.Invoke(instance, null);
 			return (double)result;
 		}
+
 	}
 }
 

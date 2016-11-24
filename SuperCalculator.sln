@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trigonometric", "Trigonomet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extended", "Extended\Extended.csproj", "{079FB76E-A81A-4905-A3C2-1B2CFD33EA7F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deriv", "Deriv\Deriv.csproj", "{04D74AAA-B43B-4B37-AAC5-1D416F1641C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -37,5 +39,9 @@ Global
 		{96DD8AFA-66CD-42E5-B383-631B0F38BBC5}.Debug|x86.Build.0 = Debug|Any CPU
 		{96DD8AFA-66CD-42E5-B383-631B0F38BBC5}.Release|x86.ActiveCfg = Release|Any CPU
 		{96DD8AFA-66CD-42E5-B383-631B0F38BBC5}.Release|x86.Build.0 = Release|Any CPU
+		{04D74AAA-B43B-4B37-AAC5-1D416F1641C7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{04D74AAA-B43B-4B37-AAC5-1D416F1641C7}.Debug|x86.Build.0 = Debug|Any CPU
+		{04D74AAA-B43B-4B37-AAC5-1D416F1641C7}.Release|x86.ActiveCfg = Release|Any CPU
+		{04D74AAA-B43B-4B37-AAC5-1D416F1641C7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
