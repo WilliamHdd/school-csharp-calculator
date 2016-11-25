@@ -50,7 +50,8 @@ namespace SuperCalculator
 					Console.WriteLine(calculator.EvaluateCommand(command, command_args ));
 				} catch (CommandNotFoundException) {
 					Console.WriteLine("The command \"" + command + "\" does not exist");
-				} catch (InvalidArgumentException) {
+				} catch (InvalidArgumentException e) {
+					Console.WriteLine(e);
 					Console.WriteLine("The arguments given to this command were invalid");
 				}
 
